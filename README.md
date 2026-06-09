@@ -1,23 +1,3 @@
-<div align="center">
-
-# 7NRP Tutorial Day
-
-[![Seventh National Research Platform Workshop](https://img.shields.io/badge/7NRP-Seventh%20National%20Research%20Platform%20Workshop-00529B?style=for-the-badge)](https://na.eventscloud.com/website/91919/)
-
-[![May 5–7 2026 · La Jolla CA](https://img.shields.io/badge/May%205%E2%80%937,%202026-La%20Jolla%2C%20California-0091CD?style=flat-square)](https://na.eventscloud.com/website/91919/)
-[![Tuesday Tutorial Day · SDSC Auditorium](https://img.shields.io/badge/Tuesday%2C%20May%205-Tutorial%20Day%20%C2%B7%20SDSC%20Auditorium-00A1EA?style=flat-square)](https://na.eventscloud.com/website/91919/agenda/)
-[![nrp.ai](https://img.shields.io/badge/nrp.ai-Documentation-0FB1A8?style=flat-square)](https://nrp.ai/)
-[![Tutorial JupyterHub](https://img.shields.io/badge/Tutorial-JupyterHub-F37726?style=flat-square&logo=jupyter&logoColor=white)](https://training.nrp-nautilus.io/)
-[![Matrix](https://img.shields.io/badge/Matrix-Live%20Help-0A2540?style=flat-square&logo=matrix&logoColor=white)](https://nrp.ai/contact/)
-
-</div>
-
----
-
-Materials (slides + hands-on tutorials) for **Tutorial Day** of the Seventh National Research Platform Workshop. The workshop runs **May 5–7, 2026** in La Jolla, California; this repository covers Tuesday's full tutorial track plus links to the parallel sessions whose materials are hosted elsewhere. The full 3-day [event agenda](https://na.eventscloud.com/website/91919/agenda/) is on the workshop site.
-
-> ⏳ **The training JupyterHub at [training.nrp-nautilus.io](https://training.nrp-nautilus.io/) is provisioned specifically for 7NRP and will be spun down after the workshop concludes on Thursday, May 7, 2026.** Materials in this repository remain available indefinitely. If you'd like to reproduce any tutorial after the workshop — for a class, a follow-up workshop, or your own research — please [reach out via Matrix](https://nrp.ai/contact/) and we'll help you spin up an equivalent environment on persistent NRP infrastructure.
-
 ## 📋 Pre-training survey — please take 2 minutes before we start
 
 <a href="images/pre-training-survey-qr.png"><img src="images/pre-training-survey-qr.png" alt="Pre-training survey QR code" width="180" align="right"></a>
@@ -28,30 +8,11 @@ Your answers let us measure how much each tutorial actually moves the needle —
 
 <br clear="right">
 
-## Tuesday agenda — Tutorial Day
-
-All Tuesday sessions run at the **San Diego Supercomputer Center Auditorium** (afternoon parallel-track B in Room 279). Materials hosted in this repository link to a folder; sessions presented by partner organizations link to their own repos.
-
-| Time | Track A — Main auditorium | Track B — Room 279 |
-|---|---|---|
-| 9:00 – 10:30 AM | [**1. NRP and Kubernetes for Education and Research**](1_nrp_kubernetes_education_research/nrp_kubernetes_education_research.md) — Tatineni, Sada, Diaz (UCSD/SDSC) | — |
-| 10:30 – 11:00 AM | *Break* | |
-| 11:00 AM – 12:00 PM | [**2. National Data Platform Education Hub on NRP**](4_ndp_education_hub/) — Ramonetti, O'Laughlin (UCSD/SDSC) | — |
-| 12:00 – 1:00 PM | *Lunch* | |
-| 1:00 – 2:00 PM | [**3. Using AI and LLM Inference on NRP**](2_ai_llm_inference_on_nrp/ai_llm_inference_on_nrp.md) — Sada (UCSD/SDSC) | **Tutorial on Drone Usage and IoT** — Graham (UCSD/SDSC) |
-| 2:00 – 3:00 PM | [**4. Setting Up Custom JupyterHubs**](3_custom_jupyterhubs_classroom_research/custom_jupyterhubs_classroom_research.md) — Sada, Diaz (UCSD/SDSC) | **ICICLE Digital Agriculture Pipeline** — Subramoni (Ohio State) |
-| 3:00 – 3:30 PM | *Break* | |
-| 3:30 – 5:00 PM | [**5. DoE American Science Cloud Experiments with NRP**](5_doe_american_science_cloud/) — Balcas, Yang (ESnet) | **AgTech for the Curriculum Discussion** — Wuerthwein (UCSD/SDSC) |
-
-**Track A** sessions all run in the **same JupyterHub** at [training.nrp-nautilus.io](https://training.nrp-nautilus.io/) — sign in once and you're set up for every Track A tutorial. Materials for Track B sessions are maintained by their respective presenters and are not in this repository; contact the presenters directly.
-
-## Quick start
-
 Two ways to follow along during the workshop:
 
 **Option 1 — Training JupyterHub (recommended, zero install).** The workshop hub at [training.nrp-nautilus.io](https://training.nrp-nautilus.io/) is pre-configured: every spawned JupyterLab pod already has `kubectl` installed and a kubeconfig wired up to the same identity, so you can open a terminal and run `kubectl` immediately. Click below to clone this repo straight into your JupyterLab session:
 
-[![Launch 7NRP Tutorial Workspace](https://img.shields.io/badge/Launch-7NRP%20Tutorial%20Workspace%20%E2%86%92-00529B?style=for-the-badge&logo=jupyter&logoColor=white)](https://training.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fnrp-nautilus%2F7nrp&branch=main&urlpath=lab%2Ftree%2F7nrp%2F)
+[![Launch 7NRP Tutorial Workspace](https://training.nrp-nautilus.io/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2Fnrp-nautilus%2Fnautilus-kubernetes-training&urlpath=tree%2Fnautilus-kubernetes-training%2F&branch=main)
 
 **Option 2 — kubectl on your laptop.** Install `kubectl` (Linux / macOS / Windows) and use the ready kubeconfig at [`files/nrp-training.kubeconfig`](files/nrp-training.kubeconfig). It carries the `jupyterhub-sa` service-account token, cluster CA, and `nrp-training-k8s` as the default namespace; the embedded token is valid for the duration of 7NRP, through end-of-day Thursday, May 7, 2026. Step-by-step instructions live in [Tutorial 1 → Interacting with NRP](1_nrp_kubernetes_education_research/nrp_kubernetes_education_research.md#interacting-with-nrp).
 
